@@ -4,89 +4,166 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filterable Image Gallery</title>
-    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <div class="container">
+  <body class="min-h-screen bg-blue-100">
+    <div class="relative max-w-7xl w-full p-5 py-20 mx-auto my-12">
       <!-- Filter Buttons -->
-      <div class="filter_buttons">
-        <button class="active" data-name="all">Show All</button>
-        <button data-name="car">Car</button>
-        <button data-name="nature">Nature</button>
-        <button data-name="people">People</button>
+      <div class="filter_buttons flex items-center gap-4 flex-wrap">
+        <button
+          class="active px-4 py-2 text-base bg-white rounded-md shadow-sm"
+          data-name="all"
+        >
+          Show All
+        </button>
+        <button
+          class="px-4 py-2 text-base bg-white rounded-md shadow-sm"
+          data-name="car"
+        >
+          Car
+        </button>
+        <button
+          class="px-4 py-2 text-base bg-white rounded-md shadow-sm"
+          data-name="nature"
+        >
+          Nature
+        </button>
+        <button
+          class="px-4 py-2 text-base bg-white rounded-md shadow-sm"
+          data-name="people"
+        >
+          People
+        </button>
       </div>
 
       <!-- Images Cards -->
-      <div class="filterable_cards">
+      <div class="filterable_cards flex mt-6 gap-5 flex-wrap">
         <!-- Card -->
-        <div class="card" data-name="car">
-          <img src="images/car-1.jpg" alt="car" />
-          <div class="card_body">
-            <h6 class="card_title">Car</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="car"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/car-1.jpg"
+            alt="car"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">Car</h6>
+            <p class="text-lg text-black">Lorem ipsum dolor sit amet.</p>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="car"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/car-2.jpg"
+            alt="car"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">Car</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
 
         <!-- Card -->
-        <div class="card" data-name="car">
-          <img src="images/car-2.jpg" alt="car" />
-          <div class="card_body">
-            <h6 class="card_title">Car</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="car"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/car-3.jpg"
+            alt="car"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">Car</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
 
         <!-- Card -->
-        <div class="card" data-name="car">
-          <img src="images/car-3.jpg" alt="car" />
-          <div class="card_body">
-            <h6 class="card_title">Car</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="nature"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/nature-1.jpg"
+            alt="nature"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">Nature</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
 
         <!-- Card -->
-        <div class="card" data-name="nature">
-          <img src="images/nature-1.jpg" alt="nature" />
-          <div class="card_body">
-            <h6 class="card_title">Nature</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="nature"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/nature-2.jpg"
+            alt="nature"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">Nature</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
 
         <!-- Card -->
-        <div class="card" data-name="nature">
-          <img src="images/nature-2.jpg" alt="nature" />
-          <div class="card_body">
-            <h6 class="card_title">Nature</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="nature"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/nature-3.jpg"
+            alt="nature"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">Nature</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
 
         <!-- Card -->
-        <div class="card" data-name="nature">
-          <img src="images/nature-3.jpg" alt="nature" />
-          <div class="card_body">
-            <h6 class="card_title">Nature</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="people"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/people-1.jpg"
+            alt="people"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">People</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
 
         <!-- Card -->
-        <div class="card" data-name="people">
-          <img src="images/people-1.jpg" alt="people" />
-          <div class="card_body">
-            <h6 class="card_title">People</h6>
-            <p class="card_text">Lorem ipsum dolor sit amet.</p>
-          </div>
-        </div>
-
-        <!-- Card -->
-        <div class="card" data-name="people">
-          <img src="images/people-2.jpg" alt="people" />
-          <div class="card_body">
-            <h6 class="card_title">People</h6>
+        <div
+          class="card max-w-sm grow flex-shrink-0 basis-80 bg-white p-1 rounded-lg shadow-sm"
+          data-name="people"
+        >
+          <img
+            class="w-full h-52 object-cover rounded-t-lg rounded-b-lg"
+            src="images/people-2.jpg"
+            alt="people"
+          />
+          <div class="p-15 pb-20">
+            <h6 class="text-xl font-medium text-gray-700">People</h6>
             <p class="card_text">Lorem ipsum dolor sit amet.</p>
           </div>
         </div>
